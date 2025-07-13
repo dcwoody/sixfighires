@@ -1,5 +1,4 @@
 {
-  "rootDirectory": "my-sixfighires-app",
   "builds": [
     {
       "src": "package.json",
