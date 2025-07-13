@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react'; // Make sure useState is imported
 
 interface JobSearchProps {
@@ -19,7 +20,7 @@ export default function JobSearch({ searchTerm, setSearchTerm }: JobSearchProps)
   return (
     <div className="bg-white py-6"> {/* Changed background from darkgray to white */}
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-primary-text mb-4 text-center">Let's Find You a Job</h2>
+        <h2 className="text-2xl font-bold text-primary-text mb-4 text-center">Let&apos;s Find You a Job</h2>
         <form onSubmit={handleSearch} className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto">
           <input
             type="text"
