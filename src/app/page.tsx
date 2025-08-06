@@ -129,10 +129,22 @@ export default function Home() {
       <TopBanner />
 
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-8">
-          {/* Section: "Hello Jacob..." and Main Job Cards */}
-          <section className="bg-white rounded-lg shadow-sm p-6 mb-8 border border-border-gray">
-            <h2 className="text-xl font-bold text-primary-text mb-4">Hello, here are the latest six figure job opportunities for you:</h2>
+        <div className="container mx-auto px-4 py-12 space-y-12">
+          {/* Hero */}
+          <section className="text-center">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-primary-text mb-4">
+              Discover High-Paying Careers
+            </h1>
+            <p className="text-lg text-secondary-text max-w-2xl mx-auto">
+              Browse curated opportunities paying six figures and above.
+            </p>
+          </section>
+
+          {/* Main Job Cards */}
+          <section className="bg-white rounded-lg shadow-sm p-6 border border-border-gray">
+            <h2 className="text-2xl font-semibold text-primary-text mb-6">
+              Latest Opportunities
+            </h2>
 
             {/* Job Search (retained for keyword search) */}
             <div className="mb-6">
@@ -151,27 +163,34 @@ export default function Home() {
           </section>
 
           {/* Trending Jobs Section */}
-          <TrendingJobs jobs={trendingJobs} />
+          <section>
+            <TrendingJobs jobs={trendingJobs} />
+          </section>
 
           {/* Feature Blocks */}
-          <FeatureBlocks />
+          <section>
+            <FeatureBlocks />
+          </section>
 
-          {/* Blog Section Placeholder */}
-          <section className="bg-white py-12 rounded-lg shadow-sm mb-8 border border-border-gray">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-2xl font-bold text-primary-text mb-4">Our Blog</h2>
-              <p className="text-secondary-text mb-6">Stay tuned for job tips, industry insights, and career advice.</p>
-              <Link href="/blog" className="bg-accent-blue text-white px-6 py-2 rounded hover:bg-blue-700 transition">
-                Read Our Articles
-              </Link>
-            </div>
+          {/* Blog Section */}
+          <section className="bg-white py-12 rounded-lg shadow-sm border border-border-gray text-center">
+            <h2 className="text-2xl font-bold text-primary-text mb-4">From the Blog</h2>
+            <p className="text-secondary-text mb-6">Stay tuned for job tips, industry insights, and career advice.</p>
+            <Link
+              href="/blog"
+              className="inline-block bg-accent-blue text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+            >
+              Read Our Articles
+            </Link>
           </section>
 
           {/* Subscribe Form Section */}
           <section className="bg-white py-8 rounded-lg shadow-sm border border-border-gray">
-            <div className="container mx-auto px-4 max-w-md">
-              <h2 className="text-xl font-bold text-primary-text mb-4 text-center">Stay Updated!</h2>
-              <p className="text-secondary-text text-center mb-4">Receive the latest job opportunities and career tips directly in your inbox.</p>
+            <div className="max-w-md mx-auto text-center">
+              <h2 className="text-xl font-bold text-primary-text mb-4">Stay Updated!</h2>
+              <p className="text-secondary-text mb-4">
+                Receive the latest job opportunities and career tips directly in your inbox.
+              </p>
               <SubscribeForm />
             </div>
           </section>
